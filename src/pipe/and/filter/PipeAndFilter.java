@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pipe.and.filter;
+
+import java.util.Scanner;
 
 /**
  *
@@ -15,7 +12,31 @@ public class PipeAndFilter {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        double recebendo = entrada();
+        double resultSoma = soma(recebendo);
+        double multiplicando = mult(resultSoma);
+        
+        System.out.println(recebendo);
+        System.out.println(resultSoma);
+        System.out.println(multiplicando);
+    }
+
+    /**
+     *
+     */
+    public static double entrada() {
+        Scanner leitura = new Scanner(System.in);
+        System.out.println("Entre com um numero");
+        double num  = Double.parseDouble(leitura.nextLine());
+        return num;
+    }
+    
+    public static double soma(double soma){
+        return soma + 10;
+    }
+
+    private static double mult(double resultSoma) {
+        return resultSoma * 10;
     }
     
 }
